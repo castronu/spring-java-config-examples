@@ -2,21 +2,18 @@ package com.castronu.examples;
 
 import com.castronu.examples.configuration.ServiceConfiguration;
 import com.castronu.examples.entity.Event;
-import com.castronu.examples.entity.Invoice;
 import com.castronu.examples.entity.Reservation;
 import com.castronu.examples.entity.User;
-import com.castronu.examples.services.BookingService;
-import com.castronu.examples.services.InvoiceService;
+import com.castronu.examples.service.BookingService;
+import com.castronu.examples.service.InvoiceService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ServiceConfiguration.class);
 
@@ -27,5 +24,8 @@ public class App
         invoiceService.generateInvoice(reservation);
 
         context.close();
+
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/service-configuration.xml");
+        ctx.close();
     }
 }

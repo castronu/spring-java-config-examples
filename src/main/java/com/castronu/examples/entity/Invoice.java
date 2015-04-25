@@ -3,9 +3,13 @@ package com.castronu.examples.entity;
 /**
  * Created by castronu on 22.04.15.
  */
-public class Invoice implements EasyTicketEntity{
+public class Invoice implements EasyTicketEntity {
 
     private final Reservation reservation;
+
+    public Invoice(Reservation reservation) {
+        this.reservation = reservation;
+    }
 
     @Override
     public String toString() {
@@ -16,9 +20,5 @@ public class Invoice implements EasyTicketEntity{
 
     public Reservation getReservation() {
         return reservation;
-    }
-
-    public Invoice(Reservation reservation) {
-        this.reservation = reservation;
     }
 }

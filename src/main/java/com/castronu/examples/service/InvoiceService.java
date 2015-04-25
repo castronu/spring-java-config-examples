@@ -1,4 +1,4 @@
-package com.castronu.examples.services;
+package com.castronu.examples.service;
 
 import com.castronu.examples.dao.InvoiceDAO;
 import com.castronu.examples.entity.Invoice;
@@ -15,7 +15,7 @@ public class InvoiceService {
         this.invoiceDAO = invoiceDAO;
     }
 
-    public Invoice generateInvoice(Reservation reservation){
+    public Invoice generateInvoice(Reservation reservation) {
         Invoice invoice = new Invoice(reservation);
         //Generate invoice...
         invoiceDAO.save(invoice);

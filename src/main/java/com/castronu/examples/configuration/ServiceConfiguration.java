@@ -1,7 +1,7 @@
 package com.castronu.examples.configuration;
 
-import com.castronu.examples.services.BookingService;
-import com.castronu.examples.services.InvoiceService;
+import com.castronu.examples.service.BookingService;
+import com.castronu.examples.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,7 +29,5 @@ public class ServiceConfiguration {
         BookingService bookingService = new BookingService(daoConfiugration.reservationDAO());
         return bookingService;
     }
-
-
 
 }

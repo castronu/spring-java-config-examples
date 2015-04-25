@@ -1,4 +1,4 @@
-package com.castronu.examples.services;
+package com.castronu.examples.service;
 
 import com.castronu.examples.dao.ReservationDAO;
 import com.castronu.examples.entity.Event;
@@ -16,10 +16,10 @@ public class BookingService {
         this.reservationDAO = reservationDAO;
     }
 
-    public Reservation bookTicket(User user, Event event){
+    public Reservation bookTicket(User user, Event event) {
         Reservation reservation = new Reservation(user, event);
         //Create reservation
-        reservationDAO.save(reservation);
+        System.out.println(reservationDAO.save(reservation));
         return reservation;
 
     }

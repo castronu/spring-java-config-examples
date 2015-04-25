@@ -6,5 +6,4 @@ package com.castronu.examples.entity;
 public interface EasyTicketEntity {
 
 
-
 }

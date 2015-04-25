@@ -7,8 +7,10 @@ import com.castronu.examples.entity.EasyTicketEntity;
  */
 public abstract class AbstractDAO {
 
-    public void save(EasyTicketEntity entity){
+    public int save(EasyTicketEntity entity) {
         System.out.println(entity + "saved.");
+        return 1;
     }
+
 
 }
